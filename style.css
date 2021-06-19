@@ -1,0 +1,138 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: 'EB Garamond', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  color: #b09259;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 100;
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+h2 {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin: 0.83em 0;
+}
+h3 {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-weight: 500;
+}
+p {
+  font-size: 18px;
+  margin: 1em 0;
+}
+
+a {
+  color: #b09259;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+section:nth-child(odd) {
+  background-color: rgb(223, 239, 242);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 50px;
+  border-radius: 20px;
+  animation: 1s ease-in fadein;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+section.Intro {
+  background-color: transparent;
+}
+section.Thanks {
+  background-color: transparent;
+}
+.Intro .background {
+  background: url('./flower.webp') no-repeat;
+  background-size: cover;
+}
+
+.Thanks .background {
+  background: url('./flower_dark.webp') no-repeat;
+  background-size: cover;
+  background-color: #dfeff2;
+}
+
+.columns {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+}
+
+.specialty {
+  height: auto;
+}
+
+.inside {
+  margin: 100px 0px;
+}
+
+.specialty h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.specialty .columns {
+  text-align: center;
+  justify-content: center;
+  column-gap: 135px;
+}
+.specialty .column {
+  column-gap: 100px;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.svg-center {
+  margin: 50px auto 20px auto;
+}
+
+.svg-small {
+  max-height: 20px;
+}
+
+@keyframes fadein {
+  from {
+    color: #fafafa;
+  }
+  to {
+    color: #b09259;
+  }
+}
