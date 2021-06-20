@@ -7,6 +7,8 @@ body {
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   color: #b09259;
+  color: hsl(39, 50%, 38%);
+  font-size: 18px;
 }
 h1 {
   font-size: 60px;
@@ -32,6 +34,15 @@ p {
 
 a {
   color: #b09259;
+  color: hsl(39, 50%, 38%);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul > li {
+  margin-bottom: 10px;
 }
 
 section {
@@ -41,7 +52,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -57,6 +68,7 @@ section:nth-child(odd) {
   padding: 50px;
   border-radius: 20px;
   animation: 1s ease-in fadein;
+  margin: 15px;
 }
 .background {
   position: absolute;
@@ -84,14 +96,15 @@ section.Thanks {
 }
 
 .columns {
-  width: 500px;
+  max-width: 700px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  grid-column-gap: 15vh;
 }
 
 .specialty {
-  height: auto;
+  min-height: unset;
 }
 
 .inside {
@@ -106,10 +119,19 @@ section.Thanks {
 .specialty .columns {
   text-align: center;
   justify-content: center;
-  column-gap: 135px;
+  column-gap: 15vw;
 }
 .specialty .column {
   column-gap: 100px;
+}
+
+.requirements {
+  min-height: unset;
+}
+
+.requirements > .card {
+  max-width: 600px;
+  background-color: unset;
 }
 
 .upper {
@@ -128,11 +150,51 @@ section.Thanks {
   max-height: 20px;
 }
 
+.button-wrapper {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  appearance: button;
+  color: rgb(255, 255, 255);
+  background: hsl(39, 50%, 38%);
+  border: 0;
+  min-width: 140px;
+  min-height: 44px;
+  border-radius: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
 @keyframes fadein {
   from {
     color: #fafafa;
   }
   to {
     color: #b09259;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: unset;
+  }
+  h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 20px;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
   }
 }
