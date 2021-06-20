@@ -184,6 +184,7 @@ button {
     font-size: 40px;
     font-weight: 100;
     letter-spacing: unset;
+    text-align: center;
   }
   h2 {
     font-size: 25px;
@@ -192,6 +193,7 @@ button {
   }
   h3 {
     font-size: 20px;
+    text-align: center;
   }
 
   .columns {
