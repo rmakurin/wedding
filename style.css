@@ -87,12 +87,13 @@ section.Thanks {
 .Intro .background {
   background: url('./flower.webp') no-repeat;
   background-size: cover;
+  background-position-x: center;
 }
 
 .Thanks .background {
   background: url('./flower_dark.webp') no-repeat;
   background-size: cover;
-  background-color: #dfeff2;
+  background-position-x: center;
 }
 
 .columns {
@@ -170,6 +171,19 @@ button {
   text-transform: uppercase;
 }
 
+.columns img {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.about .card {
+  max-width: 800px;
+}
+
+.about .columns {
+  max-width: unset;
+}
+
 @keyframes fadein {
   from {
     color: #fafafa;
@@ -198,5 +212,8 @@ button {
 
   .columns {
     grid-template-columns: 1fr;
+  }
+  .columns img {
+    max-width: 250px;
   }
 }
